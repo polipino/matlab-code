@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-syms n t
+syms t
 T = 2;
 w = 2*pi/T;
 
@@ -14,10 +14,6 @@ n = 1:N;
 a0 = (2/T)*(int(1,t,0,1)+int(-1,t,1,2));
 an = (2/T)*(int(1*cos(n*w*t),t,0,1)+int(-1*cos(n*w*t),t,1,2));
 bn = (2/T)*(int(1*sin(n*w*t),t,0,1)+int(-1*sin(n*w*t),t,1,2));
-
-disp(a0);
-disp(an);
-disp(bn);
 
 F = a0 / 2;
 for i = 1:N
